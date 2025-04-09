@@ -1,0 +1,220 @@
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.mainCnt{
+    max-height: 320vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    padding-bottom: 5vw;
+    gap: 4vw;
+    animation: fadeInUp 0.3s ease-in-out;
+}
+.cnt{
+    width: 25%;
+    height: calc(270vh / 5 * 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid #3A7563;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    gap: 5px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.cnt:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+}
+.productImg{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productImg img{
+    max-height: 100%;
+    max-width: 80%;
+    object-fit: cover;
+}
+.header{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+.title{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title p{
+    font-size: 1vw;
+    font-weight: 400;
+}
+.miniCnt{
+    height: 10%;
+    width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.miniCnt p{
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+.quantity{
+    height: 100%;
+    width: 20%;
+    margin-right: 30%;
+}
+.quantity input{
+    height: 90%;
+    width: 100%;
+    appearance: none;
+    border-radius: 5px;
+    padding: 7px;
+    border: 2px solid #3A7563;
+    font-size: 0.9vw;
+}
+
+.btn{
+    height: 100%;
+    width: 50%;
+}
+.btn button{
+    height: 90%;
+    width: 100%;
+    background-color: #3A7563;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: 500;
+    font-family: inherit;
+    border: 1px solid #3A7563;
+    transition: all 0.2s ease-in-out;
+}
+.btn button:hover {
+    background-color: #2F5D4E;
+    transform: scale(1.05);
+}
+
+.btn button:active {
+    background-color: #274B40;
+    transform: scale(0.95);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1; 
+    cursor: pointer;
+}
+
+.loading{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.loader{
+    font-weight: 500;
+    font-size: 1.5vw;
+}
+
+/*Responsiveness*/
+/*Tablets*/
+
+@media (min-width: 500px) and (max-width: 1100px){
+    .mainCnt{
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+    .header{
+        height: 10vh;
+        font-size: 2.6vh;
+    }
+    .cnt{
+        width: 40%;
+        height: calc(270vh / 7 * 0.9);
+    }
+    .title p{
+        font-size: 1.4vh;
+    }
+    .miniCnt p{
+        font-size: 1.3vh;
+    }
+    .quantity input{
+        font-size: 1.1vh;
+    }
+    .btn button{
+        font-size: 1.2vh;
+    }
+    .loading{
+        height: 80vh;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 499px){
+    .mainCnt{
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    .header{
+        height: 10vh;
+        font-size: 2.2vh;
+    }
+    .cnt{
+        width: 40%;
+        height: calc(270vh / 7.6 * 0.9);
+    }
+    .title p{
+        font-size: 1.2vh;
+    }
+    .miniCnt p{
+        font-size: 1.2vh;
+    }
+    .quantity{
+        margin-right: 20%;
+    }
+    .quantity input{
+        font-size: 1vh;
+    }
+    .btn{
+        width: 60%;
+    }
+    .btn button{
+        font-size: 1.2vh;
+    }
+    .loading{
+        height: 80vh;
+    }
+}

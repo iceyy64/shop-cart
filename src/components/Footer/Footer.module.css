@@ -1,0 +1,89 @@
+.mainCnt{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    background-color: #DFECE4;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+.cnt1, .cnt2, .cnt3, .cnt4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+.header{
+    font-size: 1.2vw;
+    font-weight: 450;
+    color: black;
+    cursor: default;
+}
+.subheading{
+    font-size: 1vw;
+    font-weight: 400;
+    color: #222;
+}
+.subheading:hover{
+    color: #3A7563; 
+    cursor: default;
+}
+.smlogo{
+    height: 2vw;
+    width: 2vw;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+.smlogo:hover {
+    transform: scale(1.1); 
+    opacity: 0.9;
+}
+
+/*Responsiveness*/
+/*Tablets*/
+
+@media (min-width: 500px) and (max-width: 1100px){
+    .mainCnt{
+        flex-wrap: wrap;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+    .header{
+        font-size: 1.7vh;
+    }
+    .subheading{
+        font-size: 1.5vh;
+    }
+    .smlogo{
+        height: 2.6vh;
+        width: 2.6vh;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 499px){
+    .mainCnt{
+        height: 35vh;
+        flex-wrap: wrap;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    .header{
+        font-size: 1.5vh;
+    }
+    .subheading{
+        font-size: 1.3vh;
+    }
+    .cnt4{
+        align-items: center;
+    }
+    .smlogo{
+        height: 2.4vh;
+        width: 2.4vh;
+    }
+}
